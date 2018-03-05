@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.notifi.model">
+
+    <class name="UserInfo" table="USERINFO">
+
+ 		<id name="userId">
+			<column name="USER_ID" />
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		<one-to-one name="user" class="com.notifi.model.User"
+			constrained="true"></one-to-one>
+		
+        <property name="name" column="NAME"/>
+        <property name="gender" column="GENDER"/>
+        <property name="profilePic" column="PROFILEPIC"/>
+	</class>
+
+</hibernate-mapping>
