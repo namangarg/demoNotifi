@@ -15,7 +15,7 @@
 		</id>
 		<one-to-one name="user" class="com.notifi.model.User"
 			constrained="true"></one-to-one>
-		
+
         <property name="name" column="NAME"/>
         <property name="gender" column="GENDER"/>
         <property name="profilePic" column="PROFILEPIC"/>

@@ -1,9 +1,12 @@
 com\notifi\dao\UserDaoImpl.class
 com\notifi\model\Main.class
-com\notifi\model\HibernateUtil.class
+com\notifi\model\ShoutsResponse.class
 com\notifi\dao\UserDao.class
 com\notifi\model\UserInfo.class
 com\notifi\services\UserService.class
+com\notifi\model\HibernateUtil.class
+com\notifi\model\Shout.class
+com\notifi\util.class
 com\notifi\services\UserServiceImpl.class
 com\notifi\model\User.class
 com\notifi\controllers\UserController.class

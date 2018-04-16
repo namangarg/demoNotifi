@@ -7,12 +7,35 @@
 
 	<class name="User" table="USER">
 		<id name="userId" column="USER_ID">
-			<generator class="native" />
+			<generator class="increment" />
 		</id>
 		<one-to-one name="userInfo" class="com.notifi.model.UserInfo"
 			cascade="save-update"></one-to-one>
+
+		<set name = "shouts" cascade="all">
+			<key column = "user_id"/>
+			<one-to-many class="com.notifi.model.Shout"/>
+		</set>
 		
-		<property name="otp" />
+		<!--<property name="otp" />-->
 		<property name="phonenumber" column="phonenumber" />
+	</class>
+
+	<class name="com.notifi.model.Shout" table="SHOUTS">
+		<id name="shoutId" column="SHOUTS_ID">
+			<generator class="increment"/>
+		</id>
+
+		<property name="title" column="title" />
+		<property name="tag" column="tag" />
+		<property name="description" column="description" />
+		<property name="latitude" column="latitude" />
+		<property name="longitude" column="longitude" />
+		<property name="landmark" column="landmark" />
+		<property name="displayGuest" column="displayGuest"/>
+		<property name="canForward" column="canForward" />
+		<property name="startTime" column="startTime"/>
+		<property name="endTime" column="endTime"/>
+		<property name="rsvpTime" column="rsvpTime"/>
 	</class>
 </hibernate-mapping>

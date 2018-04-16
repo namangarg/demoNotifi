@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.notifi.dao.UserDao;
 import com.notifi.model.User;
+import com.notifi.model.UserInfo;
 
 @Service
 @Transactional(readOnly = true)
@@ -20,9 +21,9 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 	@Transactional(readOnly = false,propagation = Propagation.REQUIRED,rollbackFor = Throwable.class)
-	public ArrayList<String> save(User user) throws RuntimeException {
+	public void save(User user) throws RuntimeException {
 		try {
-			return userDao.save(user);
+			//userDao.save(user);
 		} catch (ConstraintViolationException e) {
 			throw new RuntimeException(e.getCause());
 		}

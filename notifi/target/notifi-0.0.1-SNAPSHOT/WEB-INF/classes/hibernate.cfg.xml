@@ -13,6 +13,7 @@
  
         <mapping resource="registration/config/UserInfo.hbm.xml"/>
         <mapping resource="registration/config/User.hbm.xml"/>
+        <!--<mapping resource="registration/config/Shouts.hbm.xml"/>-->
  		 
     </session-factory>
 </hibernate-configuration>

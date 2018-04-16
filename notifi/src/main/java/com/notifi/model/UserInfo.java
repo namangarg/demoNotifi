@@ -50,9 +50,10 @@ public class UserInfo {
 		
 	}
 	
-	public UserInfo(String gender, String name) {
-		this.gender = gender;
+	public UserInfo(String name, String gender, String profilePic ) {
 		this.name = name;
+		this.gender = gender;
+		this.profilePic = profilePic;
 	}
 	
 	public String getProfilePic() {
