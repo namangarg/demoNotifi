@@ -131,7 +131,7 @@ public class UserDaoImpl implements UserDao {
 	public void save(User user) throws UnsupportedEncodingException {
 		Session session = sessionFactory.getCurrentSession();
 		try{
-			AWSCredentials credentials = new BasicAWSCredentials("AKIAII3R4JDTGSEDI6MQ", "8AiS0wayr1qPKByKiABjWCUe8iYwXODRzuEa2/OD");
+			AWSCredentials credentials = new BasicAWSCredentials("*****", "*********");
 			final AmazonS3Client client = new AmazonS3Client(credentials);
 			byte[] bI = java.util.Base64.getDecoder().decode(user.getUserInfo().getProfilePic());
 			InputStream fis = new ByteArrayInputStream(bI);
